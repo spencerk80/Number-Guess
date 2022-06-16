@@ -30,7 +30,9 @@ public class PlayAgainPrompt implements Prompt {
             UserData.getInstance().resetData();
             return PromptFactory.getGetNamePrompt();
 
-        } else return null; //End game
+        }
+
+        return null; //End game
 
     }
 }
