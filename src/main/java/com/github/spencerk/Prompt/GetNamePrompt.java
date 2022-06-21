@@ -9,12 +9,12 @@ public class GetNamePrompt implements Prompt {
     //Scanner held at the class level so it's not created every time the prompt is run
     private Scanner scanner;
 
-    public GetNamePrompt() {
-        scanner = new Scanner(System.in);
-    }
     @Override
     public Prompt run() {
         boolean satisfied = false;
+
+        //Necessary to crease a new scanner every run for tests to work. Normally, with just Sys-in, it was fine
+        scanner = new Scanner(System.in);
 
         System.out.println("Hello and welcome to the number guessing game!");
 

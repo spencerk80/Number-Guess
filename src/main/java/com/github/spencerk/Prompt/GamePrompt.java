@@ -10,14 +10,14 @@ public class GamePrompt implements Prompt{
     //Scanner held at the class level so it's not created every time the prompt is run
     private Scanner scanner;
 
-    public GamePrompt() {
-        scanner = new Scanner(System.in);
-    }
     public Prompt run() {
         Random  random  = new Random();
         int     secret  = random.nextInt(20) + 1,
                 guess   = 0;
         boolean won     = false;
+
+        //Required to make a new one every time so tests will work
+        scanner = new Scanner(System.in);
 
         //Greet once
         System.out.printf("Well %s, I'm thinking of a number inclusively between 1 and 20%n",

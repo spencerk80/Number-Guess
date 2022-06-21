@@ -18,6 +18,9 @@ public class PlayAgainPrompt implements Prompt {
 
         String response = "";
 
+        //Required to make tests work
+        scanner = new Scanner(System.in);
+
         do {
 
             System.out.print("Would you like to play again (yes/no)?: ");
